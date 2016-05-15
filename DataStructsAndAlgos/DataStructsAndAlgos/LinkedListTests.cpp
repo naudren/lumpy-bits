@@ -10,6 +10,26 @@
 #include "LinkedList.h"
 
 // LinkedList tests
+bool testLinkedList()
+{
+    bool testOK = testEmpty();
+    if (!testOK) {
+        return false;
+    }
+    
+    testOK = testAddition();
+    if (!testOK) {
+        return false;
+    }
+    
+    testOK = testDeletion();
+    if (!testOK) {
+        return false;
+    }
+    return true;
+}
+
+
 bool testEmpty()
 {
     LinkedList<int> list;

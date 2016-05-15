@@ -8,24 +8,22 @@
 
 #include <iostream>
 #include <stdio.h>
+
+#include "ErrorCodes.h"
 #include "LinkedListTests.h"
+#include "Tree.h"
 
 
 int main(int argc, const char * argv[])
 {
-    bool testOK = testEmpty();
-    if (!testOK) {
-        return 0;
-    }
-    
-    testOK = testAddition();
-    if (!testOK) {
-        return 0;
-    }
-    
-    testOK = testDeletion();
-    if (!testOK) {
-        return 0;
+    if (argc > 1) {
+        if ( strcmp(argv[1], "-dbll") == 0 )
+        {
+            if ( !testLinkedList() )
+            {
+                return LINKED_LIST_TEST_FAILED;
+            }
+        }
     }
     
     return 0;

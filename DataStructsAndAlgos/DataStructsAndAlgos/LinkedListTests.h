@@ -11,6 +11,7 @@
 
 
 // LinkedList tests
+bool testLinkedList();
 bool testEmpty();
 bool testAddition();
 bool testDeletion();
